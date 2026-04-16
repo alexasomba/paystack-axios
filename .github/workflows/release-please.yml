@@ -37,6 +37,10 @@ jobs:
         with:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
+<<<<<<< HEAD
+          scope: "@alexasomba"
+=======
+>>>>>>> a77be5ed1a2bdfae15c5c5664d32212ec3628dee
           cache: "pnpm"
 
       - run: pnpm install --no-frozen-lockfile
@@ -48,7 +52,11 @@ jobs:
       - run: pnpm test
         if: ${{ steps.release.outputs.release_created }}
 
+<<<<<<< HEAD
+      - run: npm publish --access public
+=======
       - run: pnpm publish --no-git-checks --access public
+>>>>>>> a77be5ed1a2bdfae15c5c5664d32212ec3628dee
         if: ${{ steps.release.outputs.release_created }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
