@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/alexasomba/paystack-axios/compare/v1.4.0...v1.4.1) (2026-04-16)
+
+
+### Bug Fixes
+
+* update workflow and switch to pnpm ([a3469f0](https://github.com/alexasomba/paystack-axios/commit/a3469f05c7c42bd35a156a782fdc659a7a41d1fa))
+
 ## [1.4.0](https://github.com/alexasomba/paystack-axios/compare/v1.3.0...v1.4.0) (2026-04-16)
 
 
