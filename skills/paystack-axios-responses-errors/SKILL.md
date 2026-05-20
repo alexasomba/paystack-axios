@@ -1,6 +1,6 @@
 ---
-name: responses-errors
-description: Use when handling @alexasomba/paystack-axios responses, PaystackResponse, unwrap, PaystackError, request IDs, and Paystack API envelopes.
+name: paystack-axios-responses-errors
+description: Use when handling Paystack SDK responses and errors in @alexasomba/paystack-axios, including PaystackResponse, unwrap, PaystackError, request IDs, and Paystack API envelopes.
 license: MIT
 compatibility: "Node.js >=22.0.0; ESM-only package; backend/server runtime; import @alexasomba/paystack-axios."
 ---
@@ -31,9 +31,15 @@ try {
 }
 ```
 
+`PaystackError` exposes `status`, `requestId`, `code`, `type`, and `meta`. Use `isProcessorError()` and `isValidationError()` when branching on Paystack error categories.
+
 ## Envelope behavior
 
 Paystack responses commonly include `status`, `message`, `data`, and optional `meta`. A response with HTTP 2xx can still have `status: false`; handle that as failure.
+
+## Helper exports
+
+Use `getPaystackRequestId(headers)` when extracting diagnostics from raw Axios-backed responses or test fixtures. Request IDs are commonly returned in `x-paystack-request-id` or `x-request-id`.
 
 ## Best practices
 

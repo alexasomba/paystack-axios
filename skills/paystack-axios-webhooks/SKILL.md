@@ -1,6 +1,6 @@
 ---
-name: webhooks
-description: Use when verifying, parsing, and handling Paystack webhooks with @alexasomba/paystack-axios.
+name: paystack-axios-webhooks
+description: Use when verifying, parsing, and handling Paystack webhooks with the Paystack Axios SDK @alexasomba/paystack-axios, including webhook signatures and server routes.
 license: MIT
 compatibility: "Node.js >=22.0.0; ESM-only package; backend/server runtime; import @alexasomba/paystack-axios."
 ---

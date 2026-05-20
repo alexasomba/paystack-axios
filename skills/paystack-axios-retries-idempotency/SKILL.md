@@ -1,6 +1,6 @@
 ---
-name: retries-idempotency
-description: Use when configuring @alexasomba/paystack-axios retries, Retry-After behavior, idempotency keys, timeouts, and safe retry semantics.
+name: paystack-axios-retries-idempotency
+description: Use when configuring Paystack Axios SDK retries, Retry-After behavior, idempotency keys, timeouts, and safe retry semantics for transactions or other API calls.
 license: MIT
 compatibility: "Node.js >=22.0.0; ESM-only package; backend/server runtime; import @alexasomba/paystack-axios."
 ---
@@ -32,6 +32,18 @@ const paystack = createPaystack({
   idempotencyKey: () => paymentAttempt.idempotencyKey,
 });
 ```
+
+## Helper exports
+
+The SDK exports low-level idempotency helpers for tests and transport utilities:
+
+- `DEFAULT_IDEMPOTENCY_HEADER`
+- `createIdempotencyKey()`
+- `resolveIdempotencyKey(input)`
+- `hasHeader(headers, name)`
+- `setHeader(headers, name, value)`
+
+Most application code should configure `idempotencyKey` on `createPaystack` instead of calling these helpers directly.
 
 ## Best practices
 

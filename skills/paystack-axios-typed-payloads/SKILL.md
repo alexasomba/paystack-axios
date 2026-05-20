@@ -1,6 +1,6 @@
 ---
-name: typed-payloads
-description: Use when choosing TypeScript request, query, response, or grouped client types from @alexasomba/paystack-axios.
+name: paystack-axios-typed-payloads
+description: Use when choosing TypeScript typed requests, query params, response types, or grouped client types from the Paystack Axios SDK @alexasomba/paystack-axios.
 license: MIT
 compatibility: "Node.js >=22.0.0; ESM-only package; backend/server runtime; import @alexasomba/paystack-axios."
 ---
